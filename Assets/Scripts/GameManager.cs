@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
 
         if (isGameStarted && !IsDead)  //Increase the score over time
         {
-           
+                
                 score += (Time.deltaTime * modifierScore * 8);
                 scoreText.text = score.ToString("0");
             
@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour
         modifierText.text = "x" + modifierScore.ToString("0.0");
     }
 
-    public void collectCoin()
+    public void collectCoin()   
     { 
         coinScore++;
         coinText.text = coinScore.ToString("0");

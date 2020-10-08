@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float jumpForce = 8.0f;
     [SerializeField] float gravity = 15.0f;
     private float verticalVelocity;
+    private Vector3 tempScale;
+    private BoxCollider playerCollider;
 
     //Speed Modifier
     [SerializeField] float originalSpeed = 7.0f; //In order to keep what was our original speed since it changes over time;
@@ -32,6 +34,7 @@ public class PlayerController : MonoBehaviour
     {
         speed = originalSpeed;
         controller = GetComponent<CharacterController>();
+        playerCollider = playerCollider.GetComponent<BoxCollider>();
     }
 
     // Update is called once per frame
@@ -94,7 +97,17 @@ public class PlayerController : MonoBehaviour
             if (MobileInput.Instance.SwipeUp)
             {
                 verticalVelocity = jumpForce;
+                transform.localScale = new Vector3(1, 1, 1);
             }
+
+            if (MobileInput.Instance.SwipeDown && transform.localScale.y > 0.3f )
+            {
+                tempScale = transform.localScale;
+                tempScale.y += -0.5f;
+                transform.localScale = tempScale;
+                Invoke("resetScale", 0.5f);               
+            }
+            
            
         }
         
@@ -112,6 +125,12 @@ public class PlayerController : MonoBehaviour
         moveVector.z = speed;
 
         controller.Move(moveVector * Time.deltaTime);
+    }
+
+    private void resetScale()
+    {
+
+        transform.localScale = new Vector3(1, 1, 1);
     }
 
     private bool isGrounded()   //Checks if the player model is on the ground

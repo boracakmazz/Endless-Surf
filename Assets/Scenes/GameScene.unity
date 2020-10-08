@@ -1372,6 +1372,7 @@ MonoBehaviour:
   - {fileID: 5783554113390993345, guid: 9dde216012e0b204ea766e8fb3fee374, type: 3}
   - {fileID: -4707043378518133865, guid: 9c268e20f00a3694b819f5ce4aa60e10, type: 3}
   - {fileID: 2504590204327026332, guid: e9fef77c4936a4b4db51b722731e8e6c, type: 3}
+  - {fileID: 2923016609873465238, guid: 2422af607f579124e87f88a4be5bcf5e, type: 3}
   availableTransitions:
   - {fileID: 3679197246364157486, guid: 8d9b4c9c0d6b37d4391ea4c6c4a47f8f, type: 3}
   segments: []
@@ -1642,6 +1643,11 @@ PrefabInstance:
       propertyPath: m_SlopeLimit
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 4005793299179905200, guid: b8fd67f2da79cab4b825ab5861d5e400,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.26
+      objectReference: {fileID: 0}
     - target: {fileID: 4005793299179905201, guid: b8fd67f2da79cab4b825ab5861d5e400,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1700,13 +1706,18 @@ PrefabInstance:
     - target: {fileID: 4005793299179905201, guid: b8fd67f2da79cab4b825ab5861d5e400,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.82453
+      value: 0.82
       objectReference: {fileID: 0}
     - target: {fileID: 4005793299179905202, guid: b8fd67f2da79cab4b825ab5861d5e400,
         type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+    - target: {fileID: 4005793299179905203, guid: b8fd67f2da79cab4b825ab5861d5e400,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4005793299179905204, guid: b8fd67f2da79cab4b825ab5861d5e400,
         type: 3}
       propertyPath: m_Radius
@@ -1736,6 +1747,11 @@ PrefabInstance:
         type: 3}
       propertyPath: originalSpeed
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4005793299179905205, guid: b8fd67f2da79cab4b825ab5861d5e400,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4005793299179905206, guid: b8fd67f2da79cab4b825ab5861d5e400,
         type: 3}
