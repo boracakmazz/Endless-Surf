@@ -5,8 +5,7 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     public Transform lookAt; //Our player 
-    [SerializeField]
-    public Vector3 offset = new Vector3(0, 5.0f, -10.0f);
+    [SerializeField] Vector3 offset = new Vector3(0, 5.0f, -10.0f);
 
     
 

@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
 {
     private const float LANE_DISTANCE = 2.5f;
     private const float TURN_SPEED = 0.5f;
+    [SerializeField] float SWITCH_LANE_SPEED = 1.5f;
 
     private bool isPlayerRunning = false;
 
@@ -89,7 +90,7 @@ public class PlayerController : MonoBehaviour
     private void movePlayer(Vector3 targetPosition)
     {
         Vector3 moveVector = Vector3.zero;  //Calculating delta position
-        moveVector.x = (targetPosition - transform.position).normalized.x * speed;
+        moveVector.x = (targetPosition - transform.position).normalized.x * speed * SWITCH_LANE_SPEED;
         
         if (isGrounded())
         {
