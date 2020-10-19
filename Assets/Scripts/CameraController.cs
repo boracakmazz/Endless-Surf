@@ -13,7 +13,7 @@ public class CameraController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = lookAt.position + offset;
+        transform.position = Time.deltaTime * lookAt.position + offset ;
     }
 
     
